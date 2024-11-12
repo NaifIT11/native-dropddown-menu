@@ -35,7 +35,16 @@
       </div>
     </div>
     <script>
-        const menuTrigger
+        const menuTrigger = document.querySelector("button[aria-haspopup='menu']");
+        const menu = document.querySelector("[role='menu']");
+
+        menuTrigger.addEventListener("click" , () => {
+            if(menu.hidden === true){
+                menu.hidden = false;
+            }else{
+                menu.hidden = true;
+            }
+        })
     </script>
   </body>
 </html>
